@@ -39,3 +39,42 @@ Elements:
 2. __init__()
 3. Methods
 
+Object ~ Abstract.
+Instance ~ Concrete. Attributes can have unique value for instances
+
+#### __init__
+
+Special method to define the initial state of an object
+
+```
+class House:
+	def __init__(self, price):
+		self (the instance that is being created).price (the attribute of the instance) = price (the value we are assigning)
+
+```
+
+```
+class BlackPack:
+	def __init__(self, height, size):
+		self.item = []
+		self.height = height
+		self.size = size
+		self.color = "Blue"
+```
+
+#### self
+- self is a generic way of referring to the current instance of the class
+
+- always use self for the 1st argument to instance methods
+
+- The __init__() method is called automatically when an instance of the class is created in the program.
+
+```
+class Circle:
+	def __init__(self, radius, color):
+		self.radius = radius
+		self.color = color
+
+my_circle = Circle(3, 'Red')
+```
+
