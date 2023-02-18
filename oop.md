@@ -69,6 +69,7 @@ class BlackPack:
 
 - The __init__() method is called automatically when an instance of the class is created in the program.
 
+We Skip Self When We Create an Instance:
 ```
 class Circle:
 	def __init__(self, radius, color):
@@ -77,4 +78,49 @@ class Circle:
 
 my_circle = Circle(3, 'Red')
 ```
+Comparing None to anything will always return False except when we compare it to None itself.
 
+#### Access instance attributes
+
+inside the class: self.<attribute>
+
+```
+class Backpack:
+	def __init__(self):
+		self.items = []
+		print(self.items)
+my_backpack = Backpack()
+```
+
+outside the class: <object>.<attribute>
+
+```
+class Backpack:
+	def __init__(self):
+		self.items = []
+my_backpack = Backpack()
+print(my_backpack.items)
+```
+
+#### Default arguments
+Don't use spaces around the = sign when used to indicate a keyword argument or default value for an unannotated function aparameter.
+
+ex: def complex(real, imag=0.0)    ===> not "image = 0.0"
+
+```
+class Circle:
+	def __init__(self, radius=5):
+		self.radius = radius
+my_circle = Circle(8)     ===> can overwrite
+```
+
+Note: Default arguments must be the last parameter in the list of parameters
+
+Otherwise: "SyntaxError: non-default argument follows default argument"
+
+#### Modify instance attributes
+Outside class:
+<object>.<attributed> = <new_value>
+
+Inside class:
+self.<attributed> = <new_value>
